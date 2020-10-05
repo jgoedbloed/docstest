@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation of FOG &mdash; Fog Project 1.5.9 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="What is FOG" href="../introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Fog Project
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.5.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">What is FOG</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation of FOG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-fog-server">Install FOG server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-git-on-debian-or-ubuntu">Install Git on Debian or Ubuntu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-git-on-centos-7-or-rhel-7">Install git on CentOS 7 or RHEL 7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-git-on-centos-8-or-rhel-8">Install git on CentOS 8 or RHEL 8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-fog">Getting FOG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-installer">Run the installer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-modes">Installation Modes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fog Project</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Installation of FOG</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/installation/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation-of-fog">
+<h1>Installation of FOG<a class="headerlink" href="#installation-of-fog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>Before diving right into the installation of FOG you need to decide which server OS you are going to use. FOG is made to install on RedHat based distro CentOS, Fedora, RHEL amongst others as well as Debian, Ubuntu and Arch Linux.</p>
+<p>Choose whichever you like most and have knowledge about! FOG is known to work with any of the above noted systems. Many installation manuals are available.</p>
+<p>This listing is for informational purposes only, as the required components will be automatically downloaded and installed by the FOG installation script:</p>
+<ul class="simple">
+<li>PHP 5/7</li>
+<li>MySql 5+/MariaDB 10+,</li>
+<li>Apache 2+,</li>
+<li>DHCP (pretty much any!)</li>
+<li>TFTP</li>
+<li>FTP</li>
+<li>NFS</li>
+</ul>
+<p>The LAMP setup can also be easily adjusted for a “WAMP (Windows Apache MySQL PHP) system” though will require a bit more knowledge of what packages to use and how to integrate with the FOG system.</p>
+<p>Please choose the distribution you have the most knowledge about. This list is by no means an absolute list to follow, though.</p>
+<ul class="simple">
+<li>Ubuntu 16 or higher</li>
+<li>Debian 8 or higher</li>
+<li>CentOS 7 or higher</li>
+<li>Red Hat 6 or higher</li>
+<li>Fedora 22 or higher</li>
+<li>Any version of Arch.</li>
+</ul>
+</div>
+<div class="section" id="install-fog-server">
+<h2>Install FOG server<a class="headerlink" href="#install-fog-server" title="Permalink to this headline">¶</a></h2>
+<p>The preferred method of getting FOG is via Git.</p>
+<div class="section" id="install-git-on-debian-or-ubuntu">
+<h3>Install Git on Debian or Ubuntu<a class="headerlink" href="#install-git-on-debian-or-ubuntu" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">i</span>
+<span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">git</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-git-on-centos-7-or-rhel-7">
+<h3>Install git on CentOS 7 or RHEL 7<a class="headerlink" href="#install-git-on-centos-7-or-rhel-7" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">i</span>
+<span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">git</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-git-on-centos-8-or-rhel-8">
+<h3>Install git on CentOS 8 or RHEL 8<a class="headerlink" href="#install-git-on-centos-8-or-rhel-8" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">i</span>
+<span class="n">dnf</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">git</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-fog">
+<h3>Getting FOG<a class="headerlink" href="#getting-fog" title="Permalink to this headline">¶</a></h3>
+<p>Now that git is installed, you should be able to clone the FOG repository.</p>
+<p>Generally we recommend to put the repository inside of /root but if you’ve done this sort of thing before, put it wherever you want. Here’s how we clone FOG:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">i</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">root</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">FOGProject</span><span class="o">/</span><span class="n">fogproject</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">fogproject</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-the-installer">
+<h3>Run the installer<a class="headerlink" href="#run-the-installer" title="Permalink to this headline">¶</a></h3>
+<p>To start the installation process, you would follow the below steps. Running the installer must be done as root.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="o">-</span><span class="n">i</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">root</span><span class="o">/</span><span class="n">fogproject</span><span class="o">/</span><span class="nb">bin</span>
+<span class="o">./</span><span class="n">installfog</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installation-modes">
+<h3>Installation Modes<a class="headerlink" href="#installation-modes" title="Permalink to this headline">¶</a></h3>
+<p>FOG can be installed in two different modes:</p>
+<p>First is the normal FOG server which does all of the work. Choose this option if you only want have a single FOG server in your network.</p>
+<p>The second option is to install a FOG storage node which will serve as a second place to store images on and serve images to more clients (when doing unicast). TODO: Here you can find some more information about the two modes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FOG</span> <span class="n">Server</span> <span class="n">installation</span> <span class="n">modes</span><span class="p">:</span>
+    <span class="o">*</span> <span class="n">Normal</span> <span class="n">Server</span><span class="p">:</span> <span class="p">(</span><span class="n">Choice</span> <span class="n">N</span><span class="p">)</span>
+        <span class="n">This</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">typical</span> <span class="n">installation</span> <span class="nb">type</span> <span class="ow">and</span>
+        <span class="n">will</span> <span class="n">install</span> <span class="nb">all</span> <span class="n">FOG</span> <span class="n">components</span> <span class="k">for</span> <span class="n">you</span> <span class="n">on</span> <span class="n">this</span>
+        <span class="n">machine</span><span class="o">.</span>  <span class="n">Pick</span> <span class="n">this</span> <span class="n">option</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">unsure</span> <span class="n">what</span> <span class="n">to</span> <span class="n">pick</span><span class="o">.</span>
+
+    <span class="o">*</span> <span class="n">Storage</span> <span class="n">Node</span><span class="p">:</span> <span class="p">(</span><span class="n">Choice</span> <span class="n">S</span><span class="p">)</span>
+        <span class="n">This</span> <span class="n">install</span> <span class="n">mode</span> <span class="n">will</span> <span class="n">only</span> <span class="n">install</span> <span class="n">the</span> <span class="n">software</span> <span class="n">required</span>
+        <span class="n">to</span> <span class="n">make</span> <span class="n">this</span> <span class="n">server</span> <span class="n">act</span> <span class="k">as</span> <span class="n">a</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">storage</span> <span class="n">group</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../introduction.html" class="btn btn-neutral float-left" title="What is FOG" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Jurgen Goedbloed
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

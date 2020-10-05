@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>What is FOG &mdash; Fog Project 1.5.9 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Installation of FOG" href="installation/index.html" />
+    <link rel="prev" title="Welcome to the Fog Project documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Fog Project
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.5.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What is FOG</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#features">Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-run-fog">How to run FOG</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-much-does-fog-cost">How much does FOG cost?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation of FOG</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Fog Project</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>What is FOG</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/introduction.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="what-is-fog">
+<h1>What is FOG<a class="headerlink" href="#what-is-fog" title="Permalink to this headline">¶</a></h1>
+<p>FOG is a Linux-based, free and open source computer imaging solution for various versions of Windows (XP, Vista, 7, 8/8.1, 10), Linux and Mac OS X. It ties together a few open source tools with a PHP-based web interface.</p>
+<p>FOG doesn’t use any boot disks, or CDs; everything is done via TFTP and PXE. Your PCs boot via PXE and automatically downloads a small linux client doing all the hard work of imaging your machine.</p>
+<p>Also with FOG many network drivers are built into the client’s kernel (vanilla linux), so you don’t really need to worry about network drivers (unless there isn’t kernel support for it yet).</p>
+<p>FOG also supports putting an image that came from a computer with a 80GB partition onto a machine with a 40GB hard drive as long as the data is less than 40GB.</p>
+<p>FOG supports multi-casting, meaning that you can image many PCs from the same stream. So it should be as fast whether you are imaging 1 PC or 20 PCs.</p>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p>FOG is more than just an imaging solution, FOG has grown into an imaging/cloning and network management solution.</p>
+<ul class="simple">
+<li>PXE boot environment (DHCP, iPXE, TFTP, fast HTTP download of big boot files like kernel and initrd)</li>
+<li>Imaging of Windows (XP, Vista, 7, 8/8.1, 10), Linux and Mac OS X</li>
+<li>Partitions, full disk, multiple disks, resizable, raw</li>
+<li>Snapins to install software and run jobs/scripts on the clients</li>
+<li>Printer management</li>
+<li>Change hostname and join domain</li>
+<li>Track user access on computers, automatic log off and shutdown on idle timeouts</li>
+<li>Anti-Virus</li>
+<li>Disk wiping</li>
+<li>Restore deleted files</li>
+<li>Bad blocks scan</li>
+</ul>
+</div>
+<div class="section" id="how-to-run-fog">
+<h2>How to run FOG<a class="headerlink" href="#how-to-run-fog" title="Permalink to this headline">¶</a></h2>
+<p>FOG is best implemented on a dedicated server, any spare machine you have. We recommend that you have sufficient hard drive space. Using a RAID array allows imaging multiple computers simultaneously without much performance degradation.</p>
+<p>A gigabit network card is recommended. For faster image compression and decompression, provide as much processor and RAM as you can make available.</p>
+</div>
+<div class="section" id="how-much-does-fog-cost">
+<h2>How much does FOG cost?<a class="headerlink" href="#how-much-does-fog-cost" title="Permalink to this headline">¶</a></h2>
+<p>FOG is an Open Source project and licensed under the GPL which means that you are free to use FOG on as many computers as you like for free. This also means that if you want to make any changes to the source code you are free to do so.</p>
+<p>The creators of FOG make no profits from this project with the exception of donations. FOG comes with absolutely NO WARRANTY and the creators of FOG are in NO WAY RESPONSIBLE FOR ANY DAMAGE OR LOSS CAUSED BY FOG! Please see the license file included with the FOG release for more information. With that being said we attempt to do a very good job of supporting our users, in fact it is one of the goals of FOG to have better support than most commercial products. All support requests should be placed through the FOG’s forum which is located at: <a class="reference external" href="https://forums.fogproject.org/">https://forums.fogproject.org/</a></p>
+<p>Thanks for supporting open source software and enjoy!</p>
+</div>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>Working in an educational environment our organization’s techs very often re-imaged computers in their day to day activities. For a long time we used a commercial product that in many ways didn’t meet our needs. It wasn’t web based, and you needed to create driver disks, floppys or USB drives. Other things were very difficult, such as searching for a host by MAC address; and the product was expensive, even with an educational discount.</p>
+<p>So we started to investigate ways in which we could do things better, and as our organization struggled to make a commercial product work better by trying to pxe boot dos, and testing it in Windows PE, we, the FOG Team started to build linux based solution on our own time.</p>
+<p>We finally got a working version and decided to release it as open source since we use many other open source products, and figured we should give back to the community.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="installation/index.html" class="btn btn-neutral float-right" title="Installation of FOG" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to the Fog Project documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Jurgen Goedbloed
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

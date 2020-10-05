@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>The .fogsettings file &mdash; Fog Project 1.5.9 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Fog Project
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.5.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">What is FOG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation of FOG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">FOG Project reference manual</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Fog Project</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>The .fogsettings file</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/install_fogsettings.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="the-fogsettings-file">
+<h1>The .fogsettings file<a class="headerlink" href="#the-fogsettings-file" title="Permalink to this headline">¶</a></h1>
+<p>The low-level settings that are used during installation and some settings that simply cannot be stored in the database are contained in the /opt/fog/.fogsettings file.</p>
+<p>This file contains the setup of variables used within the installer during upgrades and installs.</p>
+<div class="section" id="example-fogsettings-file">
+<h2>Example .fogsettings file<a class="headerlink" href="#example-fogsettings-file" title="Permalink to this headline">¶</a></h2>
+<p>An example .fogsettings file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## Start of FOG Settings</span>
+<span class="c1">## Created by the FOG Installer</span>
+<span class="c1">## Find more information about this file in the FOG Project wiki:</span>
+<span class="c1">##     https://wiki.fogproject.org/wiki/index.php?title=.fogsettings</span>
+<span class="c1">## Version: 1.5.4.8</span>
+<span class="c1">## Install time: Wed 01 Aug 2018 06:57:53 PM CDT</span>
+<span class="n">ipaddress</span><span class="o">=</span><span class="s1">&#39;10.0.0.39&#39;</span>
+<span class="n">copybackold</span><span class="o">=</span><span class="s1">&#39;0&#39;</span>
+<span class="n">interface</span><span class="o">=</span><span class="s1">&#39;ens3&#39;</span>
+<span class="n">submask</span><span class="o">=</span><span class="s1">&#39;255.255.255.0&#39;</span>
+<span class="n">routeraddress</span><span class="o">=</span><span class="s1">&#39;10.0.0.1&#39;</span>
+<span class="n">plainrouter</span><span class="o">=</span><span class="s1">&#39;10.0.0.1&#39;</span>
+<span class="n">dnsaddress</span><span class="o">=</span><span class="s1">&#39;208.67.222.222&#39;</span>
+<span class="n">username</span><span class="o">=</span><span class="s1">&#39;fog&#39;</span>
+<span class="n">password</span><span class="o">=</span><span class="s1">&#39;pgyf0wC7N1Gl7RmkNuG0uNKPnM8KYYn28phazwnrwQs=&#39;</span>
+<span class="n">osid</span><span class="o">=</span><span class="s1">&#39;2&#39;</span>
+<span class="n">osname</span><span class="o">=</span><span class="s1">&#39;Debian&#39;</span>
+<span class="n">dodhcp</span><span class="o">=</span><span class="s1">&#39;N&#39;</span>
+<span class="n">bldhcp</span><span class="o">=</span><span class="s1">&#39;0&#39;</span>
+<span class="n">dhcpd</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">blexports</span><span class="o">=</span><span class="s1">&#39;1&#39;</span>
+<span class="n">installtype</span><span class="o">=</span><span class="s1">&#39;N&#39;</span>
+<span class="n">snmysqluser</span><span class="o">=</span><span class="s1">&#39;root&#39;</span>
+<span class="n">snmysqlpass</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">snmysqlhost</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span>
+<span class="n">installlang</span><span class="o">=</span><span class="s1">&#39;0&#39;</span>
+<span class="n">storageLocation</span><span class="o">=</span><span class="s1">&#39;/images&#39;</span>
+<span class="n">fogupdateloaded</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">docroot</span><span class="o">=</span><span class="s1">&#39;/var/www/&#39;</span>
+<span class="n">webroot</span><span class="o">=</span><span class="s1">&#39;/fog/&#39;</span>
+<span class="n">caCreated</span><span class="o">=</span><span class="s1">&#39;yes&#39;</span>
+<span class="n">httpproto</span><span class="o">=</span><span class="s1">&#39;http&#39;</span>
+<span class="n">startrange</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">endrange</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">bootfilename</span><span class="o">=</span><span class="s1">&#39;undionly.kpxe&#39;</span>
+<span class="n">packages</span><span class="o">=</span><span class="s1">&#39;apache2 bc build-essential cpp curl g++ gawk gcc genisoimage gzip htmldoc isolinux lftp libapache2-mod-php7.0 libc6 libcurl3 liblzma-dev m4 mysql-client mysql-server net-tools nfs-kernel-server openssh-server php7.0 php7.0-bcmath php7.0-cli php7.0-curl php7.0-fpm php7.0-gd php7.0-json php7.0-mbstring php7.0-mcrypt php7.0-mysql php-gettext sysv-rc-conf tar tftpd-hpa tftp-hpa unzip vsftpd wget xinetd zlib1g &#39;</span>
+<span class="n">noTftpBuild</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">notpxedefaultfile</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+<span class="n">sslpath</span><span class="o">=</span><span class="s1">&#39;/opt/fog/snapins/ssl/&#39;</span>
+<span class="n">backupPath</span><span class="o">=</span><span class="s1">&#39;/home/&#39;</span>
+<span class="n">php_ver</span><span class="o">=</span><span class="s1">&#39;7.0&#39;</span>
+<span class="n">php_verAdds</span><span class="o">=</span><span class="s1">&#39;-7.0&#39;</span>
+<span class="n">sslprivkey</span><span class="o">=</span><span class="s1">&#39;/opt/fog/snapins/ssl//.srvprivate.key&#39;</span>
+<span class="c1">## End of FOG Settings</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fogsettings-file-options">
+<h2>.fogsettings file options<a class="headerlink" href="#fogsettings-file-options" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="header">
+<h3>Header<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h3>
+<p>Only gives some simplistic information to help users.
+Does no actions just gives some information.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## Start of FOG Settings</span>
+<span class="c1">## Created by the FOG Installer</span>
+<span class="c1">## Version: 7625</span>
+<span class="c1">## Install time: Sat 14 May 2016 08:05:18 PM EDT</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="footer">
+<h3>Footer<a class="headerlink" href="#footer" title="Permalink to this headline">¶</a></h3>
+<p>Does no actions, just tells where FOG’s default variables are setup
+Any new items will go below this, and you can add your own variables.
+You can add variables wherever you want.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## End of FOG Settings</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ip-address">
+<h3>IP Address<a class="headerlink" href="#ip-address" title="Permalink to this headline">¶</a></h3>
+<p>Defines the IP address of the node/server.
+This is also used on servers to setup the default.ipxe file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ipaddress</span><span class="o">=</span><span class="s1">&#39;192.168.1.5&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="interface">
+<h3>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h3>
+<p>This just sets the storage nodes/server interface as it will be stored in the Database.  This used to be used for multicast setups and for the bandwidth graph.  This is now setup so it is only used on the bandwidth graph as we already know the ip address anyway.  Multicast tasks can get their own interface instead of relying on user entry.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">interface</span><span class="o">=</span><span class="s1">&#39;eth0&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="username">
+<h3>Username<a class="headerlink" href="#username" title="Permalink to this headline">¶</a></h3>
+<p>This variable is the user setup for the linux user on the server.  This allows a user to login to the server/node under this username through linux.  The purpose of this is more specifically setup for FTP usage.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;fog&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="password">
+<h3>Password<a class="headerlink" href="#password" title="Permalink to this headline">¶</a></h3>
+<p>This is the linux fog user password.  It is randomly generated if the value is not already defined.  Every update will reset the password to what is in this field.  You should, if you predefined a fog user and the installation is the first time, create the /opt/fog/.fogsettings file. Only add the password field to ensure your password doesn’t get changed accidentally.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">password</span><span class="o">=</span><span class="s1">&#39;Some!random_Password\here0918358&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="os-identifier">
+<h3>OS Identifier<a class="headerlink" href="#os-identifier" title="Permalink to this headline">¶</a></h3>
+<p>This is the OS identifier used during the installation.  The value is numeric.</p>
+<p>Valid Values are:
+1. Redhat based.
+2. Debian based.
+3.  Arch</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">osid</span><span class="o">=</span><span class="s1">&#39;2&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="os-name">
+<h3>OS Name<a class="headerlink" href="#os-name" title="Permalink to this headline">¶</a></h3>
+<p>This is the name of the OS as it’s being installed.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">osname</span><span class="o">=</span><span class="s1">&#39;Debian&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dns-address">
+<h3>DNS Address<a class="headerlink" href="#dns-address" title="Permalink to this headline">¶</a></h3>
+<p>Used for DHCP setup.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnsaddress</span><span class="o">=</span><span class="s1">&#39;192.168.1.5&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dnsbootimage">
+<h3>dnsbootimage<a class="headerlink" href="#dnsbootimage" title="Permalink to this headline">¶</a></h3>
+<p>No longer used.  It’s purpose was originally because the FOS (Fog Operating System – init.xz/init_32.xz/init.gz) did not dynamically get the dns address from DHCP as dhcp was not called.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnsbootimage</span><span class="o">=</span><span class="s1">&#39;192.168.1.5&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="subnet-mask">
+<h3>Subnet Mask<a class="headerlink" href="#subnet-mask" title="Permalink to this headline">¶</a></h3>
+<p>This defines the subnet mask to use if the system is to be used as a DHCP server.  It will assume the subnet mask of the interface being used, but can be changed later if you see fit.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">submask</span><span class="o">=</span><span class="s1">&#39;255.255.255.0&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="router-address">
+<h3>Router Address<a class="headerlink" href="#router-address" title="Permalink to this headline">¶</a></h3>
+<p>This will setup the router address to use if the system is to be used as a DHCP server.  It currently only sets as an ip address, but in the past contained the whole dhcp configuration string.  The config string was removed as it would only work on isc-dhcp-server, when some might be using dnsmasq or another dhcp server.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">routeraddress</span><span class="o">=</span><span class="s1">&#39;192.168.1.1&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plain-router">
+<h3>Plain Router<a class="headerlink" href="#plain-router" title="Permalink to this headline">¶</a></h3>
+<p>Very similar to the Router Address elements above, but can be used to redirect to maybe another router/switch other than the main.
+::
+plainrouter=’192.168.1.1’</p>
+</div>
+<div class="section" id="dodhcp">
+<h3>dodhcp<a class="headerlink" href="#dodhcp" title="Permalink to this headline">¶</a></h3>
+<p>Just tells if we want fog to install dhcp.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dodhcp</span><span class="o">=</span><span class="s1">&#39;N&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bldhcp">
+<h3>bldhcp<a class="headerlink" href="#bldhcp" title="Permalink to this headline">¶</a></h3>
+<p>Same, more or less, as dodhcp</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bldhcp</span><span class="o">=</span><span class="s1">&#39;0&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dhcpd">
+<h3>dhcpd<a class="headerlink" href="#dhcpd" title="Permalink to this headline">¶</a></h3>
+<p>Defines what package to install for dhcp server.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dhcpd</span><span class="o">=</span><span class="s1">&#39;isc-dhcp-server&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="startrange">
+<h3>startrange<a class="headerlink" href="#startrange" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>::</dt>
+<dd>startrange=’’</dd>
+</dl>
+</div>
+<div class="section" id="endrange">
+<h3>endrange<a class="headerlink" href="#endrange" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">endrange</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bootfilename">
+<h3>bootfilename<a class="headerlink" href="#bootfilename" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bootfilename</span><span class="o">=</span><span class="s1">&#39;undionly.kpxe&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nfs">
+<h3>NFS<a class="headerlink" href="#nfs" title="Permalink to this headline">¶</a></h3>
+<p>Defines if the installer should rebuild the exports every time. Setting to 0 will ensure the exports file for nfs does not get rebuilt. Setting to 1 will update the exports file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">blexports</span><span class="o">=</span><span class="s1">&#39;1&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="type-of-installation">
+<h3>Type of installation<a class="headerlink" href="#type-of-installation" title="Permalink to this headline">¶</a></h3>
+<p>Just tells the installer if this is going to be a full server, or a node.  If it’s a node, the value will be S.  If it’s a full server, the value will be N.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">installtype</span><span class="o">=</span><span class="s1">&#39;N&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mysql-user">
+<h3>MySQL User<a class="headerlink" href="#mysql-user" title="Permalink to this headline">¶</a></h3>
+<p>This is the username to connect to the database as.  Blank will default to connecting as user root.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">snmysqluser</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+<p>MySQL Password
+This is the password to connect to the database.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">snmysqlpass</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mysql-host">
+<h3>MySQL Host<a class="headerlink" href="#mysql-host" title="Permalink to this headline">¶</a></h3>
+<p>This is the host to connect to the database.  Blank will default to localhost/127.0.0.1.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">snmysqlhost</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="language">
+<h3>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h3>
+<p>Language packs for the OS can be installed.  This enables more appropriate translations of information.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">installlang</span><span class="o">=</span><span class="s1">&#39;0&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="donate">
+<h3>Donate<a class="headerlink" href="#donate" title="Permalink to this headline">¶</a></h3>
+<p>Donate seems a bit strange a name for this.  What it does, however, is not pass money.  It’s a different method that tells the server if it’s going to allow mining of bitcoins during the imaging phases. Donation can be disabled later and this value will have no more effect during updates. It only operates to define setting during fresh installs.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">donate</span><span class="o">=</span><span class="s1">&#39;0&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="image-storage">
+<h3>Image storage<a class="headerlink" href="#image-storage" title="Permalink to this headline">¶</a></h3>
+<p>This defines the location for image storage. This is just a string value to the path of your images location.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">storageLocation</span><span class="o">=</span><span class="s1">&#39;/images&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="updating">
+<h3>Updating<a class="headerlink" href="#updating" title="Permalink to this headline">¶</a></h3>
+<p>This defines if the update file is loaded. 1 is the set value after fresh install.  When the .fogsettings file is loaded this value is checked and tells the system to perform an update. If this isn’t 1 or the variable is not found, it requests “input” from the user (unless you’re running with the -y argument).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fogupdateloaded</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="docroot">
+<h3>docroot<a class="headerlink" href="#docroot" title="Permalink to this headline">¶</a></h3>
+<p>This value tells httpd where the document root will be for the GUI.
+For example, when you go to <a class="reference external" href="http://127.0.0.1/">http://127.0.0.1/</a>  The document root is looking on the server at the docroot location for files to present to the user.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docroot</span><span class="o">=</span><span class="s1">&#39;/var/www/html/&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="webroot">
+<h3>webroot<a class="headerlink" href="#webroot" title="Permalink to this headline">¶</a></h3>
+<p>This value tells FOG where the webroot is.  Webroot is the link to actually get to the FOG GUI. If the value is just ‘/’ you would be accessing the FOG GUI with the link <a class="reference external" href="http://127.0.0.1/">http://127.0.0.1/</a>.  If it’s ‘fog/’ you are accessing the GUI as <a class="reference external" href="http://127.0.0.1/fog/">http://127.0.0.1/fog/</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">webroot</span><span class="o">=</span><span class="s1">&#39;fog/&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cacreated">
+<h3>caCreated<a class="headerlink" href="#cacreated" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">caCreated</span><span class="o">=</span><span class="s1">&#39;yes&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="packages">
+<h3>packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h3>
+<p>Lists all packages that need to be installed</p>
+<p>Debian 9 example as of August 1st, 2018. This requires the Remi repository to be installed (which the fog installer sets up for you).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">packages</span><span class="o">=</span><span class="s1">&#39;apache2 bc build-essential cpp curl g++ gawk gcc genisoimage gzip htmldoc isolinux lftp libapache2-mod-php7.0 libc6 libcurl3 liblzma-dev m4 mysql-client mysql-server net-tools nfs-kernel-server openssh-server php7.0 php7.0-bcmath php7.0-cli php7.0-curl php7.0-fpm php7.0-gd php7.0-json php7.0-mbstring php7.0-mcrypt php7.0-mysql php7.0-mysqlnd php-gettext sysv-rc-conf tar tftpd-hpa tftp-hpa unzip vsftpd wget xinetd zlib1g&#39;</span>
+</pre></div>
+</div>
+<p>CentOS 7 example as of August 1st, 2018. These packages require the epel repository (which the fog installer sets up for you).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">packages</span><span class="o">=</span><span class="s1">&#39;bc curl gcc gcc-c++ genisoimage gzip httpd lftp m4 make mod_ssl mtools mysql mysql-server net-tools nfs-utils php php-bcmath php-cli php-common php-fpm php-gd php-ldap php-mbstring php-mcrypt php-mysqlnd php-process syslinux tar tftp-server unzip vsftpd wget xinetd xz-devel&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="notftpbuild">
+<h3>noTftpBuild<a class="headerlink" href="#notftpbuild" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">noTftpBuild</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nopxedefaultfile">
+<h3>nopxedefaultfile<a class="headerlink" href="#nopxedefaultfile" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">notpxedefaultfile</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sslpath">
+<h3>sslpath<a class="headerlink" href="#sslpath" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sslpath</span><span class="o">=</span><span class="s1">&#39;/opt/fog/snapins/ssl/&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="backuppath">
+<h3>backupPath<a class="headerlink" href="#backuppath" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">backupPath</span><span class="o">=</span><span class="s1">&#39;/home/&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Jurgen Goedbloed
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
